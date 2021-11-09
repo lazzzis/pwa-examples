@@ -9,7 +9,7 @@ function randomValueFromArray(array) {
 setInterval(() => {
   const randomChoice = randomValueFromArray(images);
   imgElem.src = `images/${randomChoice}.jpg`;
-}, 2000);
+}, 5000);
 
 // Register service worker to control making site work offline
 
@@ -28,7 +28,7 @@ addBtn.style.display = 'none';
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   // e.preventDefault();
-  console.log('beforeinstallprompt')
+  console.log('beforeinstallprompt', new Date())
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI to notify the user they can add to home screen
